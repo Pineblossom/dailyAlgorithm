@@ -1,3 +1,4 @@
+console.time("耗时");
 for (let i = 5; i < 999999; i++) {
     if (i%5 === 1) {
         let first = i-Math.floor(i/5)-1
@@ -11,6 +12,7 @@ for (let i = 5; i < 999999; i++) {
                         let fifth = fourth - Math.floor(fourth/5) -1
                         if (fifth%5 === 1) {
                             console.log("最少有" + i + "个苹果")
+                            console.timeEnd("耗时");
                             return i
                         }
                     }
@@ -19,3 +21,4 @@ for (let i = 5; i < 999999; i++) {
         }
     }
 }
+
